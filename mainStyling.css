@@ -1,0 +1,15 @@
+@font-face {
+    font-family:"Allesa";
+    src: url("/fonts/AllessaPersonalUse-4pRl.ttf") format("truetype");
+  }
+  .shading {
+    background: linear-gradient(to bottom, #243447 0%,  #c51f5d 100%);
+}
+.navStyle{
+ text-decoration:  #c51f5d;
+ 
+}
+.navStyle:hover {
+  background-color:#243447;
+  width: 200%;
+}
