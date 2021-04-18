@@ -62,8 +62,8 @@
 .column {
   float: left;
   width: 33.33%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  padding: 15px;
+  height: auto; /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
@@ -73,5 +73,12 @@
   clear: both;
 }
 a {
-  color: rgb(43, 9, 87);
+  color: rgb(139, 8, 96);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
