@@ -3,13 +3,75 @@
     src: url("/fonts/AllessaPersonalUse-4pRl.ttf") format("truetype");
   }
   .shading {
-    background: linear-gradient(to bottom, #243447 0%,  #c51f5d 100%);
+    background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);
 }
+.shadingFooter {
+  background: linear-gradient(to bottom,  #c51f5d 0%, #243447  100%);
+}
+
 .navStyle{
  text-decoration:  #c51f5d;
  
 }
 .navStyle:hover {
-  background-color:#243447;
-  width: 200%;
+  background: #243447;
+  display: block;
+  left: 40px;
+ 
+}
+
+.social:hover {
+  transform: scale(1.5);
+}
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #c51f5d;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn:hover {
+  background-color: #243447;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+a {
+  color: rgb(43, 9, 87);
 }
