@@ -120,7 +120,7 @@ p1 {
 }
 
 /* Change color of dropdown links on hover */
-.Creative-content a:hover {background-color: rgb(145, 17, 96);}
+.Creative-content a:hover {background-color: rgb(187, 19, 89);}
 
 /* Show the dropdown menu on hover */
 .CreativeWork:hover .Creative-content {display: block;}
