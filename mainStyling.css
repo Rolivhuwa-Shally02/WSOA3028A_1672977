@@ -42,11 +42,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #c51f5d;
+  background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);
   color: rgb(224, 199, 199);
   font-size: 20px;
   padding: 12px 24px;
-  border: none;
+  border:none;
   cursor: pointer;
   border-radius: 5px;
 }
