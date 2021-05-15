@@ -42,7 +42,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);
+  background: linear-gradient(to bottom,  #c51f5d 0%, #243447  100%);
   color: rgb(224, 199, 199);
   font-size: 20px;
   padding: 12px 24px;
