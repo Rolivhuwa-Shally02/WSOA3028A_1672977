@@ -43,8 +43,8 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #c51f5d;
-  color: white;
-  font-size: 16px;
+  color: rgb(224, 199, 199);
+  font-size: 20px;
   padding: 12px 24px;
   border: none;
   cursor: pointer;
@@ -72,9 +72,20 @@
   display: table;
   clear: both;
 }
+
 a {
   color: rgb(139, 8, 96);
+
 }
+b {
+  color: #ffffff;
+
+}
+
+p3 {
+   
+  font-family: Georgia, serif;
+  }
 
 .center {
   display: block;
