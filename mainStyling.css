@@ -1,3 +1,182 @@
+
+*{
+ /*padding: 0;
+ margin: 0;*/
+ box-sizing: border-box;
+}
+body{
+  
+  background-color: #ffffff;
+  color: #333;
+
+
+
+
+}
+.navbarMenu{
+  background-color: #af3964;
+  color: #c51f5d;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  font-size: 18px;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+}
+.navbarMenu a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.navbarMenu a.navbarMenu-title{
+float: left;
+height: inherit;
+line-height: inherit;
+padding: 0 30px;
+font-size: 22px;
+text-transform: uppercase;
+font-weight: 400;
+letter-spacing: 2px;
+}
+.navbarMenu a.navbarMenu-title em{
+  font-size: 28px;
+  font-weight: 700;
+}
+.navbarMenu ul{
+  float: right;
+  list-style: none;
+  height: inherit;
+  line-height: inherit;
+  padding: 0 50px;
+}
+.navbarMenu ul li{
+  display:inline-block;
+}
+.navbarMenu ul li a{
+  display: block;
+  text-align: center;
+  min-width: 120px;
+  padding: 0 30px;
+  
+}
+.navbarMenu ul li a:hover {
+  background-color: #243447;
+}
+
+
+.navbarMenu .navbarMenu-toggler{
+  display: none;  
+}
+@media (max-width: 990px){
+  .navbarMenu ul{
+    padding: 0 10px;
+  }
+.navbarMenu ul li a{
+  min-width: 100px;
+  padding: 0 20px;
+}
+}
+
+
+
+
+
+@media (max-width:770px)
+{
+.navbarMenu {
+  padding: 0;
+}
+.navbarMenu ul{
+  width: 100%;
+  padding: 0;
+  background-color: #0f0f0f;
+ /* height: auto;*/
+  height: 100vh;
+  max-height: 0;
+  overflow: hidden;
+  transition: all ease-in-out 0.3s;
+}
+.navbarMenu ul.open {
+  max-height: 100vh;
+}
+.navbarMenu ul li{
+  width: 100%;
+  /*border-bottom: 1px solid #243447;*/
+}
+.navbar ul li a {
+  padding: 0;
+}
+.navbarMenu .navbarMenu-toggler{
+  display: block;
+  position: absolute;
+  height: 40px;
+  top: 20 px;
+  right: 20px;
+  background-color: transparent;
+  color: #fff;
+  border: 3px solid #fff;
+  /*border: none;*/
+  border-radius: 4px;
+  outline: none;
+  padding: 0 5px;
+  cursor: pointer;
+
+}
+.navbarMenu .navbarMenu-toggler em,
+.navbarMenu .navbarMenu-toggler em::before,
+.navbarMenu .navbarMenu-toggler em::after{
+display: block;
+content: '';
+background-color: #fff;
+height: 3px;
+width: 28px;
+border-radius: 4px;
+transition: all ease-in-out 0.3s;
+}
+.navbarMenu .navbarMenu-toggler em::before {
+  transform: translate(-8px);
+
+}
+.navbarMenu .navbarMenu-toggler em::after {
+  transform: translate(5px);
+}
+.navbarMenu .navbarMenu-toggler.open-navbarMenu-toggler em{
+  /*transform: rotate(90deg);*/
+  background-color: transparent;
+}
+.navbarMenu .navbarMenu-toggler.open-navbarMenu-toggler em::before{
+  transform: translate(0px) rotate(45deg);
+}
+.navbarMenu .navbarMenu-toggler.open-navbarMenu-toggler em::after{
+  transform: translate(-3px) rotate(-45deg);
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*styling for all the pages*/
 @font-face {
     font-family:"Allesa";
     src: url("/fonts/AllessaPersonalUse-4pRl.ttf") format("truetype");
