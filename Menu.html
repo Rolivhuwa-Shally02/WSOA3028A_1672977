@@ -12,23 +12,43 @@
 </head>
 <!--<body> -->
 <body style="margin:0;"> 
+
+
+ <header>
+
     <nav class = "navbarMenu">
-        
-        
-                  
-              
-                     
-                         
-                         
+                                       
      <a href = "#" class = "navbarMenu-title"> <img src="images/logo.png" style="height: 2cm;" color="#243447"> <h>Fitness, Health & Sanity</h></a>
-   <ul>
+   <ul class = "Menu">
        <li> <a href = "Menu.html">Home </a></li>
        <li> <a href = "about.html">About </a></li>
-       <li> <a href = "blog.html">Theory Blogs </a></li>
-       <li> <a href = "creative.html">Creative Work</a></li>
+       
+       <li id = "blogs"> 
+        <text class="droptxt">Theory Blogs</text>
+        <ul id  ="dropdown">
+          <li><a href = "blog.html"> --------Blogs------- </a></li>
+          <li><a href = "CharacterDes.html"> Characterdescription & Rationale</a></li>
+          <li><a href = "Wireframes.html">  ----Wireframes--- </a></li> 
+        </ul >
+      </li>
+
+
+
+
+      <li id = "creative" > 
+        <li> <a href = "creative.html">CreativeWork</a></li>
+        <ul id ="mycreative" class="dropdown-content">
+        <li><a href = "Noxoloblogs.html">Noxolo's blogs </a></li>
+          <li><a href = "Myimages.html">Images</a></li>
+          <li><a href = "videos.html">Videos</a></li>
+        </ul>
+        </li>
+
        <li> <a href = "gallery.html">Gallery</a></li>
        <li> <a href = "contact.html">Contact</a></li>
-   </ul>
+
+      </ul>
+
    <button class="navbarMenu-toggler">
        <em>
 
@@ -39,19 +59,36 @@
     </nav>
 
 
- 
-    <!--<header class= "homepage"></header>
-    <section id = "Home" class = "container"><h2>Home</h2>
-    </section>
-    <section id = "about" class= "container"><h2>About</h2></section>
-     <section id ="theory blogs" class = "container" ><h2>Theory Blogs</h2></section>
-     <section id ="creative" class = "container" ><h2>Creative Work</h2></section>
-     <section id ="gallery" class = "container" ><h2>Gallery</h2></section>
-     <section id ="contact" class = "container" ><h2>Contact</h2></section>
-    
--->
+   </header>
 
+   
+<script type = "text/javascript">
+function createBubble()
+{
+  const section = document.querySelector('section')
+  const createElement = document.createElement('em')
+  let size = Math.random() * 60;
+
+  createElement.style.width = size + 'px';
+  createElement.style.height = size + 'px';
+  createElement.style.left = Math.random() * innerWidth + "px";
+  section.appendChild(createElement);
+
+  setTimeout (() =>{
+    createElement.remove()
+  },3500 )
+ 
+
+
+}
+
+setInterval(createBubble,50)
+
+
+</script>
+<!--content-->
 <section>  
+
     <section class="container">
      <img src="homeImage/homePicture.png" style="width: 100%;" alt="food">
   
@@ -71,6 +108,7 @@
         transition: all 0.5s;
         cursor: pointer;
         margin: 5px;
+        
       }
       
       .btn span {

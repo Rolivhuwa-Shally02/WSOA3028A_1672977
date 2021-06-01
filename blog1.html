@@ -1,88 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
-    <title>This is the home page</title>
-    <!-- for font icons -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive NavBar Menu</title>
+    <script src="index.js" type="module" async ></script>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--gradient-->
- <link rel="stylesheet" href="mainStyling.css">
+    <link rel="stylesheet" href="mainStyling.css">
 
 </head>
 <body style="margin:0;">
          
             <!-- Start Header -->
-            <table class="shading" border="0" width="100%" cellpadding="0" cellspacing="0" >
-              
-              <tr>
+            <nav class = "navbarMenu">
+                                       
+              <a href = "#" class = "navbarMenu-title"> <img src="images/logo.png" style="height: 2cm;" color="#243447"> <h>Fitness, Health & Sanity</h></a>
+            <ul class = "Menu">
+                <li> <a href = "Menu.html">Home </a></li>
+                <li> <a href = "about.html">About </a></li>
                 
-                 <td>
-                    <table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
-                      <img src="images/logo.png" style="height: 3cm;"<font color="#243447" >
-                       <tr>
-                           
-                           <td width="30%">&nbsp;</td>
-                           <td ><a href="Menu.html" class="navStyle">
-                              <font face="arial" color="#ffffff" size="4" >
-                               Home
-                              </font></a>
-                           </td>
-                           <td><a href="about.html" class="navStyle">
-                                 <font face="arial" color="#ffffff" size="4">
-                                 About
-                                </font></a>
-                            </td>
-                           <td><a href="blog.html"class="navStyle">
-                            <font face="arial" color="#ffffff" size="4">
-
-                              <section class="CreativeWork">
-                                <text class="droptxt">Theory Blogs</text>
-                                <section class="Creative-content"> Blogs
-                                  <!--Creative links-->
-                                  <a href="CharacterDes.html">Character description & rationale</a>
-                                  <a href="Wireframes.html">wireframes</a>
-                                  
-                                </section>
-                              </section>
-  
-                            </font></a>
-                           </td>
-                           <td><a href="#" class="navStyle">
-                             <font face="arial" color="#ffffff" size="4">
-                              <section class="CreativeWork">
-                                <text class="droptxt">Creative Work</text>
-                                <section class="Creative-content">
-                                  <!--Creative links-->
-                                  <a href="Noxoloblogs.html">Noxolo's blogs</a>
-                                  <a href="Myimages.html">Images</a>
-                                  <a href="videos.html">Videos</a>
-                                </section>
-                              </section>
-
-                              
-                          </font></a>
-                          </td>
-                           <td><a href="gallery.html" class="navStyle">
-                            <font face="arial" color="#ffffff" size="4">
-                            Gallery
-                            </font></a>
-                           </td>
-                           <td><a href="contact.html" class="navStyle">
-                            <font face="arial" color="#ffffff" size="4">
-                           Contact
-                            </font></a>
-                           </td>
-                       </tr>
-                    </table>
-                 </td>
-              </tr>
-            </table>
-            <!-- End Header -->
-            <td>
-              <font face="arial" color="#c51f5d" size="5">
-               <strong>Fitness, Health & Sanity</strong>
-              </font>
-           </td>
+                <li id = "blogs"> 
+                 <text class="droptxt">Theory Blogs</text>
+                 <ul id  ="dropdown">
+                   <li><a href = "blog.html"> --------Blogs------- </a></li>
+                   <li><a href = "CharacterDes.html"> Characterdescription & Rationale</a></li>
+                   <li><a href = "Wireframes.html">  ----Wireframes--- </a></li> 
+                 </ul >
+               </li>
+         
+         
+         
+         
+               <li id = "creative" > 
+                 <li> <a href = "creative.html">CreativeWork</a></li>
+                 <ul id ="mycreative" class="dropdown-content">
+                 <li><a href = "Noxoloblogs.html">Noxolo's blogs </a></li>
+                   <li><a href = "Myimages.html">Images</a></li>
+                   <li><a href = "videos.html">Videos</a></li>
+                 </ul>
+                 </li>
+         
+                <li> <a href = "gallery.html">Gallery</a></li>
+                <li> <a href = "contact.html">Contact</a></li>
+         
+               </ul>
+         
+            <button class="navbarMenu-toggler">
+                <em>
+         
+                </em>
+            </button>
+         
+         
+             </nav>
      <!-- content starts here -->
 
      <html>
