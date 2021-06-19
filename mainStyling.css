@@ -2,10 +2,11 @@
 
  body {
   padding-top: 100px;
- 
+ }
+
  
 
-}
+
 .navbarMenu{
   background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);
   background-color: #af3964;
@@ -75,9 +76,11 @@ letter-spacing: 2px;
 .navbarMenu .navbarMenu-toggler{
   display: none;  
 }
-@media (max-width: 990px){
+@media screen and (max-width: 1048px){
   .navbarMenu ul{
     padding: 0 10px;
+
+
   }
 .navbarMenu ul li a{
   min-width: 100px;
@@ -89,10 +92,14 @@ letter-spacing: 2px;
 
 
 
-@media (max-width:770px)
+@media screen and (max-width:770px)
 {
+  body{
+    overflow-x:hidden ;
+  }
 .navbarMenu {
-  padding: 0px;
+ position: relative;
+ right: 0px;
   
 }
 .navbarMenu ul{
@@ -127,12 +134,14 @@ letter-spacing: 2px;
   /*border: none;*/
   border-radius: 4px;
   outline: none;
-  padding: 0 5px;
+  padding: 0 8px;
   cursor: pointer;
 
 }
 .navbarMenu .navbarMenu-toggler em,
 .navbarMenu .navbarMenu-toggler em::before,
+
+
 
 .navbarMenu .navbarMenu-toggler em::after{
 display:  block;
@@ -189,6 +198,7 @@ section em{
     opacity: 1;
   }
 }
+
 /*flip box*/
 
 
@@ -256,12 +266,53 @@ section em{
     font-family:"Allesa";
     src: url("/fonts/AllessaPersonalUse-4pRl.ttf") format("truetype");
   }
+
+ 
+   
+   
   .shading {
     background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);
 }
 .shadingFooter {
+  
   background: linear-gradient(to bottom,  #c51f5d 0%, #243447  100%);
+
+ width: 100%; 
+  top: 10px;
+  margin-top: -2px;
+ 
 }
+
+.contactinfo ul{
+  display: flex;
+  
+}
+
+.contactinfo {
+display: inline-flex;
+text-decoration: none;
+height: 200px;
+margin: auto;
+font-size: 20;
+justify-content: center;
+
+}
+.contactinfo ul li {
+  text-decoration: none;
+  padding: 10px 60px;
+  
+ 
+
+  }
+
+  .contactinfo ul li i{
+    text-decoration: none;
+    width:  350px;
+    color: #243447;
+   
+    }
+  
+
 
 .navStyle{
  text-decoration:  #c51f5d;
@@ -273,9 +324,47 @@ section em{
   left: 40px;
  
 }
+ .social-links{
+  display:flex ;
+  justify-content: center;
+ }
+
+ .social-links ul {
+  display: flex;
+  
+ }
+
+.social{
+  list-style: none;
+  
+}
+.social a{
+  padding:10px 60px;
+  font-size: 30px;
+  color: #ffffff;
+
+
+
+}
+  
+.social a i {
+background-color: #c51f5d;
+display: inline-block;
+width: 50px;
+line-height: 50px;
+text-align: center;
+border: 20px;
+
+}
+
 
 .social:hover {
   transform: scale(1.5);
+
+
+
+
+
 }
 /* Container needed to position the button. Adjust the width as needed */
 .container {
@@ -320,10 +409,12 @@ section em{
 }
 * {
   box-sizing: border-box;
+
 }
 
 /* Create three equal columns that floats next to each other */
 .column {
+  
   float: left;
   width: 33.33%;
   padding: 15px;
@@ -426,7 +517,7 @@ padding: -10px 0px;
     display:none;
     position: absolute;
     width:130%;
-    background: transparent !important;
+    
     /*background-color:  #243447;*/
     min-width: 60px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
