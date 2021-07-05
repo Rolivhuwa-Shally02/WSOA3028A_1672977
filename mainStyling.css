@@ -222,7 +222,7 @@ flex-direction: row;
 }
 
 .contactinfo {
-
+display: flex;
 position: static;
 text-decoration: none;
 height: 200px;
