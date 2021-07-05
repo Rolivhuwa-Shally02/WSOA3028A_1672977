@@ -1,253 +1,184 @@
-
-
- body {
-  padding-top: 100px;
- }
-
- 
-
-
-.navbarMenu{
-  background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);
-  background-color: #af3964;
-  color: #c51f5d;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  width: 100%;
-  height: 100px;
-  line-height: 80px;
-  font-size: 18px;
-  padding: 0 30px;
-  position: fixed; 
-  top: 0;
-  left: 0;
-  z-index: 1;
-
+body {
+padding-top: 100px;
+font-family:"Roboto";
+position:static;
 }
-.navbarMenu a {
-  text-decoration: none;
-  color: #ffffff;
+
+ *{
+padding:0;
+margin:0;
+box-sizing: border-box;
+}
+
+
+
+header {
+background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);
+height: 100px;
+
+width: 100%;
+/*height: 100px;*/
+font-size: 18px;
+padding: 0px 40px;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+
 }
 
 .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+position: fixed;
+top: 0;
+width: 100%;
 }
 
-.navbarMenu a.navbarMenu-title{
-float: left;
-height: inherit;
-line-height: inherit;
-padding: 0 30px;
-font-size: 22px;
-text-transform: uppercase;
-font-weight: 400;
-letter-spacing: 2px;
+.main-heading {
+text-align: left;
+font-size:32px;
+font-weight:bold;
+padding:0px 10px;
+top: 0;
+color:#eee;
 }
-.navbarMenu a.navbarMenu-title em{
-  font-size: 28px;
-  font-weight: 700;
+
+/*section {
+padding: 32px;
+}*/
+
+.desktop-nav {
+width: 100vw;
+position: absolute;
+height:20px;
+top:0;
+left: 0;
+z-index: 1;
+
 }
-.navbarMenu ul{
-  float: right;
-  list-style: none;
-  height: inherit;
-  line-height: inherit;
-  padding: 0 50px;
+.sticky {
+position: fixed;
+top: 0;
+width: 100%;
 }
-.navbarMenu ul li{
-  display:inline-block;
+nav {
+float:right;
 }
-.navbarMenu ul li a{
-  display: inline-block;
-  text-align: center;
-  min-width: 100px;
-  padding: 0 30px;
-  
-}
-.navbarMenu ul li a:hover {
-  background-color: #243447;
-  
+
+nav ul {
+display: flex;
+padding: 30px 40px;
+font-size: 18px;
+list-style: none;
 
 }
 
+nav ul a {
+
+padding: 16px 32px;
+display: block;
+text-decoration: none;
+color:#fff;
 
 
-.navbarMenu .navbarMenu-toggler{
-  display: none;  
-}
-@media screen and (max-width: 1048px){
-  .navbarMenu ul{
-    padding: 0 10px;
-
-
-  }
-.navbarMenu ul li a{
-  min-width: 100px;
-  padding: 0 20px;
-}
 }
 
+nav ul a:hover {
+background:#243447;
+}
 
+nav ul ul {
+display: none;
+position: absolute;
+flex-direction: column;
+box-shadow: #243447 ;
+}
 
-
-
-@media screen and (max-width:770px)
-{
-  body{
-    overflow-x:hidden ;
-  }
-.navbarMenu {
- position: relative;
- right: 0px;
-  
-}
-.navbarMenu ul{
-  width: 100%;
-  padding: 0;
-  background-color: #243447;
- /* height: auto;*/
-  height: 100vh;
-  max-height: 0;
-  overflow: hidden;
-  transition: all ease-in-out 0.3s;
-}
-.navbarMenu ul.open {
-  max-height: 100vh;
-}
-.navbarMenu ul li{
-  width: 100%;
-  /*border-bottom: 1px solid #243447;*/
-}
-.navbar ul li a {
-  padding: 0;
-}
-.navbarMenu .navbarMenu-toggler{
-  display: inline-block;
-  position: absolute;
-  height: 40px;
-  top: 20 px;
-  right: 20px;
-  background-color: transparent;
-  color: #fff;
-  border: 3px solid #fff;
-  /*border: none;*/
-  border-radius: 4px;
-  outline: none;
-  padding: 0 8px;
-  cursor: pointer;
+nav ul ul a {
+min-width:170px;
+background:  #c51f5d;
 
 }
-.navbarMenu .navbarMenu-toggler em,
-.navbarMenu .navbarMenu-toggler em::before,
 
+.mobile-nav {
+display:none;
+}
 
+#toggle-nav {
+display:none;
 
-.navbarMenu .navbarMenu-toggler em::after{
+}
+
+i {
+margin-left: 8px;
+
+}
+
+/* Mobile Navigation */
+
+@media(max-width:600px) {
+.desktop-nav {
+display: none;
+
+}
+
+#toggle-nav {
+display:block;
+position:fixed;
+top:20px;
+right:200px;
+font-size:42px;
+background:#eee;
+padding: 2px 16px;
+border-radius:50%;
+transition: .4s;
+cursor:pointer;
+}
+
+#toggle-nav.open {
+transform: rotate(225deg);
+color: white;
 display:  block;
-content: '';
-background-color: #fff;
-height: 3px;
-width: 28px;
-border-radius: 4px;
-transition: all ease-in-out 0.3s;
+
+
+background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);
+}
+.mobile-nav {
+display: block;
+max-height:0;
+overflow:hidden;
+transition: .4s ease-in-out;
 }
 
-.navbarMenu .navbarMenu-toggler em::before {
-  transform: translate(-8px);
-
-}
-.navbarMenu .navbarMenu-toggler em::after {
-  transform: translate(3px);
-}
-.navbarMenu .navbarMenu-toggler.open-navbarMenu-toggler em{
-  /*transform: rotate(90deg);*/
-  background-color: transparent;
-}
-.navbarMenu .navbarMenu-toggler.open-navbarMenu-toggler em::before{
-  transform: translate(0px) rotate(45deg);
-}
-.navbarMenu .navbarMenu-toggler.open-navbarMenu-toggler em::after{
-  transform: translate(-3px) rotate(-45deg);
-}
+.mobile-nav.open {
+max-height:260px;
 
 }
 
-section em{
-  position: absolute;
-  bottom: -100px;
-  background:rgb(224, 199, 199);
-  /*background:linear-gradient(to bottom,#243447  0%,  #c51f5d 100%); */
-  border-radius: 60%;
-  pointer-events:none ;
-  box-shadow: inset 0 0 10px rgba(255,255,255,0,5);
-
-  animation: animate 8s linear infinite;
-
-}
-@keyframes animate
-{
-  0%
-  {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-  100%
-  {
-    transform: translateY(-1200%);
-    opacity: 1;
-  }
+.mobile-nav ul a {
+display:block;
+padding: 8px 16px;
+text-decoration: none;
+color:#fff;
+background:#222;
 }
 
-/*flip box*/
-
-
-
-/* Slideshow container */
-.flip-box {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+.mobile-nav ul ul  {
+margin-left: 4px;
+display:none;
 }
 
-/* This container is needed to position the front and back side */
-.flip-box-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+.mobile-nav ul ul a {
+background:#111;
+}
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
-}
 
-/* Position the front and back side */
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
 
-/* Style the front side (fallback if image is missing) */
-.flip-box-front {
-  background-color: #bbb;
-  color: black;
-}
 
-/* Style the back side */
-.flip-box-back {
-  background-color: rgb(170, 32, 117);
-  color: white;
-  transform: rotateY(180deg);
-}
+
+
+
+
 
 
 
@@ -263,90 +194,92 @@ section em{
 
 /*styling for all the pages*/
 @font-face {
-    font-family:"Allesa";
-    src: url("/fonts/AllessaPersonalUse-4pRl.ttf") format("truetype");
-  }
+font-family:"Allesa";
+src: url("/fonts/AllessaPersonalUse-4pRl.ttf") format("truetype");
+}
 
- 
-   
-   
-  .shading {
-    background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);
+
+.shading {
+background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);
 }
 .shadingFooter {
-  
-  background: linear-gradient(to bottom,  #c51f5d 0%, #243447  100%);
 
- width: 100%; 
-  top: 10px;
-  margin-top: -2px;
- 
+background: linear-gradient(to bottom,  #c51f5d 0%, #243447  100%);
+
+width: 100%; 
+top: 10px;
+margin-top: -2px;
 }
 
-.contactinfo ul{
-  display: flex;
-  
+.contactinfo ul
+{
+position: static;
+display: absolute;
+left: 20px;
+display: flex;
+flex-direction: row;
+
 }
 
 .contactinfo {
-display: inline-flex;
+
+position: static;
 text-decoration: none;
 height: 200px;
 margin: auto;
 font-size: 20;
-justify-content: center;
 
 }
 .contactinfo ul li {
-  text-decoration: none;
-  padding: 10px 60px;
-  
- 
+text-decoration: none;
+padding: 10px 60px;
 
-  }
 
-  .contactinfo ul li i{
-    text-decoration: none;
-    width:  350px;
-    color: #243447;
-   
-    }
-  
+
+}
+
+.contactinfo ul li i{
+text-decoration: none;
+width:  350px;
+color: #243447;
+
+}
+
 
 
 .navStyle{
- text-decoration:  #c51f5d;
- 
+text-decoration:  #c51f5d;
+
 }
 .navStyle:hover {
-  background: #243447;
-  display: block;
-  left: 40px;
- 
-}
- .social-links{
-  display:flex ;
-  justify-content: center;
- }
+background: #243447;
+display: block;
+left: 40px;
 
- .social-links ul {
-  display: flex;
-  
- }
+}
+.social-links{
+display:flex ;
+justify-content: center;
+}
+
+.social-links ul {
+display: flex;
+
+}
 
 .social{
-  list-style: none;
-  
+list-style: none;
+
 }
 .social a{
-  padding:10px 60px;
-  font-size: 30px;
-  color: #ffffff;
+padding:10px 60px;
+font-size: 30px;
+color: #ffffff;
 
 
 
 }
-  
+
 .social a i {
 background-color: #c51f5d;
 display: inline-block;
@@ -359,7 +292,7 @@ border: 20px;
 
 
 .social:hover {
-  transform: scale(1.5);
+transform: scale(1.5);
 
 
 
@@ -368,128 +301,123 @@ border: 20px;
 }
 /* Container needed to position the button. Adjust the width as needed */
 .container {
-  position: relative;
-  width: 100%;
+position: relative;
+
+background-size: cover;
+
 }
 
 /* Make the image responsive */
 .container img {
-  width: 100%;
-  height: auto;
+width: 100%;
+height: auto;
+background-size: cover;
+
+
 }
 
 /* Style the button and place it in the middle of the container/image */
 .container .btn {
-  position: absolute;
-  top: 30%;
-  left: 45%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background: linear-gradient(to bottom,  #c51f5d 0%, #243447  100%);
-  color: rgb(224, 199, 199);
-  font-size: 18px;
-  padding: 12px 24px;
-  border:none;
-  cursor: pointer;
-  border-radius: 5px;
-  
+position: absolute;
+top: 30%;
+left: 45%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+background: linear-gradient(to bottom,  #c51f5d 0%, #243447  100%);
+color: rgb(224, 199, 199);
+font-size: 18px;
+padding: 12px 24px;
+border:none;
+cursor: pointer;
+border-radius: 5px;
+
 
 }
 
 
 .container .btn.hover {
- 
-  transform: scale(1.5);
+
+transform: scale(1.5);
 
 }
 
 
 .container .btn:hover {
-  background-color: #243447;
+background-color: #243447;
 }
 * {
-  box-sizing: border-box;
+box-sizing: border-box;
 
 }
 
 /* Create three equal columns that floats next to each other */
 .column {
-  
-  float: left;
-  width: 33.33%;
-  padding: 15px;
-  height: auto; /* Should be removed. Only for demonstration */
+
+float: left;
+width: 33.33%;
+padding: 15px;
+height: auto; /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+content: "";
+display: table;
+clear: both;
 }
 
 a {
-  color: rgb(139, 8, 96);
+color: rgb(139, 8, 96);
 
 }
 b {
-  color: #ffffff;
+color: #ffffff;
 
 }
 
 p3 {
-   
-  font-family: Georgia, serif;
-  }
+
+font-family: Georgia, serif;
+}
 
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
 }
 p1 { 
-  font-size: 18px;
-  display: block;
+font-size: 18px;
+display: block;
 }
 ul{
-  list-style:none;
+list-style:none;
 }
-.Menu > li{
-  display:inline-block;
-  color: #ffffff;
-  padding: 8px;
-  padding: -10px 8px;
-  transition: all 0.8s ease;
-  position: relative;
-}
-.Menu li:hover{
-  cursor: pointer;
-  background-color: #243447;
-  
 
-}
+
+
+
 #blogs{
 color: #ffffff;
 }
 #creative{
-  color:#f1f1f1;
+color:#f1f1f1;
 
 }
 
 #dropdown {
 
-  display:none;
-  position: absolute;
-  width:130%;
-  background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);;
-  
-  min-width: 60px;
-  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-  z-index: 5;
-  text-align: left;
-  left: -20%;
-  top: 70%
+display:none;
+position: absolute;
+width:130%;
+background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);;
+
+min-width: 60px;
+/*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+z-index: 5;
+text-align: left;
+left: -20%;
+top: 70%
 }
 #dropdown li{
 
@@ -497,83 +425,83 @@ padding: -10px 0px;
 
 }
 #dropdown.active{
-  display: inline-block;
-  text-align: center;
-  padding: 10px 0px;
-  text-align: center; 
+display: inline-block;
+text-align: center;
+padding: 10px 0px;
+text-align: center; 
 
 
-  
-   
-  
+
+
+
 }
 
 
 /*dropdown creative*/
 
 
- 
-  #mycreative {
-    display:none;
-    position: absolute;
-    width:130%;
-    
-    /*background-color:  #243447;*/
-    min-width: 60px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 5;
-    text-align: left;
-    left: -20%;
-    top: 70%
-  }
-  #mycreative li{
-    
-  padding: -10px 0px;
-  
-  }
-  #mycreative.active{
-    display: inline-block;
-    text-align: center;
-    padding: 10px 0px;
-    text-align: center; 
 
-  }
+#mycreative {
+display:none;
+position: absolute;
+width:130%;
+
+/*background-color:  #243447;*/
+min-width: 60px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 5;
+text-align: left;
+left: -20%;
+top: 70%
+}
+#mycreative li{
+
+padding: -10px 0px;
+
+}
+#mycreative.active{
+display: inline-block;
+text-align: center;
+padding: 10px 0px;
+text-align: center; 
+
+}
 
 
 
 /* Dropdown Button */
 .droptxt {
-  color: white;
-  padding: 16px;
-  font-size: 20px;
-  border: none;
+color: white;
+padding: 16px;
+font-size: 20px;
+border: none;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .CreativeWork {
-  position: relative;
-  display: inline-block;
-  padding: 10px 15px;
-  z-index: 5;
+position: relative;
+display: inline-block;
+padding: 10px 15px;
+z-index: 5;
 
 }
 
 /* Dropdown Content (Hidden by Default) */
 .Creative-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
 }
 
 /* Links inside the dropdown */
 .Creative-content ul li a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
 }
 
 /* Change color of dropdown links on hover */
@@ -584,6 +512,44 @@ padding: -10px 0px;
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .CreativeWork:hover .droptxt {background-color: #243447;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

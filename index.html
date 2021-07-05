@@ -8,6 +8,8 @@
     <script src="index.js" type="module" async ></script>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="mainStyling.css">
+    <!--<link rel="stylesheet" href="animation.css">-->
+
 
 </head>
 <!--<body> -->
@@ -51,9 +53,9 @@
 
 
    </nav>
-
+  
    
-<script type = "text/javascript">
+ <!-- <script type = "text/javascript">
 function createBubble()
 {
   const section = document.querySelector('section')
@@ -76,14 +78,16 @@ function createBubble()
 setInterval(createBubble,50)
 
 
-</script>
+</script> 
+
 <!--content-->
+
 <section>  
 
     <section class="container">
      <img src="images/homePicture.png" style="width: 100%;" alt="food">
-  
-    <button class="btn"><a href="foodMenu.html"> <p3 style="color:white"><span>View Healthy Food Ideas </p3 ></span> </a></button>
+    
+    <button class="btn"><a href="foodMenu.html"> <p3 style="color:white">View Healthy Food Ideas </p3 > </a></button>
   
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <style>
@@ -105,13 +109,13 @@ setInterval(createBubble,50)
       .btn span {
         cursor: pointer;
         display: inline-block;
-        position: relative;
+        position: fixed;
         transition: 0.4s;
       }
       
       .button span:after {
         content: '\00bb';
-        position: absolute;
+        position: fixed;
         opacity: 0;
         top: 0;
         right: -20px;
@@ -127,8 +131,8 @@ setInterval(createBubble,50)
         right: 0;
       }
       </style>
-      </head>
-      <body>
+   
+    
          
       
      

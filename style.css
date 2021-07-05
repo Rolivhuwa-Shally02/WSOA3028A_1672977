@@ -1,0 +1,47 @@
+body {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.APIContainer {
+    margin: 50px auto 150px auto;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid rgb(212, 66, 115);
+    border-radius: 20px;
+    width: 40%;
+    min-width: 500px;
+    height: 20%;
+    background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);
+    color: white;
+    font-size: 18px;
+}
+
+.marginTopBottom {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.covidInput {
+    display: flex;
+    justify-content: center;
+    line-height: 2;
+    background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);
+    color: white;
+    
+}
+
+#countries {
+    margin-left: 20px;
+    width: 30%;
+    background:  #243447;
+    background: linear-gradient(to bottom, #243447 0%, #c51f5d 100%);
+    color: white;
+    background-color:  #c51f5d ;
+   
+}
+
+.mySeparator {
+    height: 0.5px;
+    width: 80%;
+    
+    
+}

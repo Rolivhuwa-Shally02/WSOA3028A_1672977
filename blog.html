@@ -1,61 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive NavBar Menu</title>
-    <script src="index.js" type="module" async ></script>
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="mainStyling.css">
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--<link rel="stylesheet" href="navbar.css">-->
+  <link rel="stylesheet" href="mainStyling.css">
+  <link rel="stylesheet" href="animation.css">
+  <title>Responsive Nav Menu</title>
+  <script src="index.js" type="module" async ></script>
 </head>
-<body style="margin:0;">
-    
-            <!-- Start Header -->
 
-            <nav class = "navbarMenu">
-                                       
-              <a href = "#" class = "navbarMenu-title"> <img src="images/logo.png" style="height: 2cm;" color="#243447"> <h>Fitness, Health & Sanity</h></a>
-            <ul class = "Menu">
-                <li> <a href = "index.html">Home </a></li>
-                <li> <a href = "about.html">About </a></li>
-                
-                <li id = "blogs"> 
-                 <text class="droptxt">Theory Blogs</text>
-                 <ul id  ="dropdown">
-                   <li><a href = "blog.html"> --------Blogs------- </a></li>
-                   <li><a href = "CharacterDes.html"> Characterdescription & Rationale</a></li>
-                   <li><a href = "Wireframes.html">  ----Wireframes--- </a></li> 
-                 </ul >
-               </li>
-         
-         
-         
-         
-               <li id = "creative" > 
-                 <li> <a href = "creative.html">CreativeWork</a></li>
-                 <ul id ="mycreative" class="dropdown-content">
-                 <li><a href = "Noxoloblogs.html">Noxolo's blogs </a></li>
-                   <li><a href = "Myimages.html">Images</a></li>
-                   <li><a href = "videos.html">Videos</a></li>
-                 </ul>
-                 </li>
-         
-                <li> <a href = "gallery.html">Gallery</a></li>
-                <li> <a href = "contact.html">Contact</a></li>
-         
-               </ul>
-         
-            <button class="navbarMenu-toggler">
-                <em>
-         
-                </em>
-            </button>
-         
-         
-             </nav>
+<body >
+
+  <header>
+    <section class="main-heading"><img src="images/logo.png" style="height: 2cm;" color="#243447"> <h>Fitness, Health & Sanity</h></section>
+  </header>
+
+  <section class="desktop-nav">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="drop-down"><a href="#">Theory Blogs <i class="fas fa-caret-down"></i></a>
+          <ul>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="CharacterDes.html">CharacterDescription and Rationale</a></li>
+            <li><a href="Wireframes.html">Wireframes</a></li>
+          </ul>
+        </li>
+        <li class="drop-down"><a href="#">Creative Work <i class="fas fa-caret-down"></i></a>
+          <ul>
+            <li><a href="Noxoloblogs.html">Noxolo's blogs</a></li>
+            <li><a href="Myimages.html">Images</a></li>
+            <li><a href="videos.html">Videos</a></li>
+          </ul>
+        </li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+</section>
+
+  <section id="toggle-nav">☰</section>
+ 
+  <section class="mobile-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="m-drop-down"><a href="#">Theory Blogs <i class="fas fa-caret-down"></i></a>
+        <ul>
+          <li><a href="blog.html">Blogs</a></li>
+          <li><a href="CharacterDes.html">CharacterDescription and Rationale</a></li>
+          <li><a href="Wireframes.html">Wireframes</a></li>
+        </ul>
+      </li>
+      <li class="m-drop-down"><a href="#">Creative Work <i class="fas fa-caret-down"></i></a>
+        <ul>
+          <li><a href="Noxoloblogs.html">Noxolo's blogs</a></li>
+          <li><a href="Myimages.html">Images</a></li>
+          <li><a href="videos.html">Videos</a></li>
+        </ul>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </section>
+
      <!-- content starts here -->
 
   <!-- blog1 content -->  
@@ -96,8 +111,8 @@
   </section>
 </section>
 
-<section>
-  
+
+<section class="row">
   <!-- blog4 content -->
   <section class="column" style="background-color:#ffffff">
     <h2 style="text-align: center;" >How does the Medium is the message impact our 
@@ -131,10 +146,10 @@
   </section>
  
 </section>
-</section> 
+ 
 <!-- blog7 content -->
    
-
+<section class="row">
   <section class="column" style="background-color:#ffffff">
     <h2 style="text-align: center;">Methods for analysis and critiques of UX and/or UI  </h2>
     <img src="blogImages/blog7picture.png" style="width: 70%;" alt="food" class="center">
@@ -143,7 +158,7 @@
        the process of developing and improving quality
         of interaction between the user and the product. According to ...<a href="blogsfolder/blog7.html">Read More</a></p>
   </section>
-</section>
+
     <!-- blog8 content -->
   <section class="column" style="background-color:#ffffff">
     <h2>Usability and accessibility on the web</h2>
@@ -153,7 +168,7 @@
       Usability measures how much or often the system is used, this could the software or an application etc. it also has
        to do with efficiency, quality and satisfaction when using something...<a href="blogsfolder/blog8.html">Read More</a></p>
   </section>
-  </section>
+
 
  <!-- blog9 content -->
 
@@ -169,6 +184,7 @@
 </section>
 
  <!-- blog10 content -->
+ <section class="row">
 <section class="column" style="background-color:#ffffff">
 
   <h2 style="text-align: center;" >The relation between HTML, CSS and JavaScript (Website creation)</h2> 
@@ -177,7 +193,7 @@
      by giving a description of each language mentioned above. Firstly, we must understand that HTML and CSS
       are not programming languages, HTML is a Hypertext..<a href="blogsfolder/blog10.html">Read More</a></p>
 </section>
-</section>
+
 <section class="column" style="background-color:#ffffff">
 
   <h2 style="text-align: center;" >Digital divide</h2> 
@@ -186,7 +202,7 @@
     that means access to technology and software tools. The gap between developed regions and non- developed 
     regions, poor and rich people. It also has to do with economic and social inequality ..<a href="blogsfolder/blog11.html">Read More</a></p>
 </section>
-</section>
+
 <section class="column" style="background-color:#ffffff">
 
   <h2 style="text-align: center;" >Ethical implementation of UX and UI </h2> 
@@ -197,7 +213,7 @@
       and UI? ethics are just set of principles that one has to follow on certain activity..<a href="blogsfolder/blog12.html">Read More</a></p>
 </section>
 </section>
-</section>
+<section class="row">
 <section class="column" style="background-color:#ffffff">
 
   <h2 style="text-align: center;" >Critical analysis of my UX and UI: My Website</h2> 
@@ -207,7 +223,7 @@
       of what I have done on my site, the design pattern and the reasons for them as well as what I do
        not see fit or bad design ideas..<a href="blogsfolder/blog13.html">Read More</a></p>
 </section>
-</section>
+
 <section class="column" style="background-color:#ffffff">
 
   <h2 style="text-align: center;" >Experts worry about your personal data in 2020 election: Reflection</h2> 
@@ -217,7 +233,10 @@
      purposes during United States election in 2016. Cambridge Analytica is British political data-analysis  ..<a href="blogsfolder/blog14.html">Read More</a></p>
 </section>
 
-</section>
+
+
+
+
 
 <section class="column" style="background-color:#ffffff">
 
@@ -226,10 +245,42 @@
   <p style="text-align:center" ><h3>Bonus blog</h3>I would first like to give an overview of feminism then I will later give a 
     discussion of my perspective on this context. Feminism can be the advocacy of women’s rights concerning equality of gender 
     or it could mean the political, economic and social equality of gender. Feminism is shaped by the issues  ..<a href="blogsfolder/blog15.html">Read More</a></p>
-</section>
+    </section>
+ <section>  
+
+  <section class="row">
+
+    <section class="column" style="background-color:#ffffff">
+
+      <h2 style="text-align: center;" >Radical AI Podcast: Love, Challenge and Hope: Building a Movement to Dismantle the New Jim Code: Reflection</h2> 
+      <img src="blogImages/Radical AI.png" style="width: 70%;" alt="food" class="center">
+      <p style="text-align:center" >This is a review on an interview about ethical issues, racism, discrimination integrating with technology, 
+        asking questions such as, Is the AI racist, is technology racist?  Also involving a research on how racism is emended in technology 
+        system that led to writing of a book by Dr Ruha Benjamin..<a href="blogsfolder/blog16.html">Read More</a></p>
+    </section>
+    
+    <section class="column" style="background-color:#ffffff">
+    
+      <h2 style="text-align: center;" >My experience taking the Implicit Bias Tests and how Implicit Bias impacts software development.: Reflection</h2> 
+      <img src="blogImages/How-to-identify-your-own-implicit-biases.jpg" style="width: 70%;" alt="food" class="center">
+      <p style="text-align:center" >Study shows that Implicit Bias Test is when we have unconscious attitudes or stereotypes towards a group
+         of people, on the other hand the word implicit means indirect, This test has an impact on our understanding, choices and actions.
+          Bias could mean good, bad or neutral, you can make bias choices depending..<a href="blogsfolder/blog17.html">Read More</a></p>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+
+
+  </section>
 </section>
 
-</section>
+
+
             
                     <!-- content ends here -->
 <!--Footer starts here-->
