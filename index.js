@@ -1,112 +1,66 @@
+(() =>{
+ 
+  const openNavMenu = document.querySelector(".open-nav-menu"),
+  closeNavMenu = document.querySelector(".close-nav-menu"),
+  navMenu = document.querySelector(".nav-menu"),
+  menuOverlay = document.querySelector(".menu-overlay"),
+  mediaSize = 991;
 
+  openNavMenu.addEventListener("click", toggleNav);
+  closeNavMenu.addEventListener("click", toggleNav);
+  // close the navMenu by clicking outside
+  menuOverlay.addEventListener("click", toggleNav);
 
-
-
-
-
-
-
-
-const parent = document.querySelectorAll(".drop-down");
-const nav = document.querySelector("nav");
-
-for (let i = 0; i < parent.length; i++) {
-  parent[i].addEventListener("click", function () {
-    let ddStatus = parent[i].childNodes[2].style.display;
-
-    if (ddStatus === "flex") {
-      parent[i].childNodes[2].style.display = "none";
-    } else {
-      closeAll(parent);
-      parent[i].childNodes[2].style.display = "flex";
-    }
-  })
-}
-
-function closeAll(arg) {
-  for (let i = 0; i < arg.length; i++) {
-    arg[i].childNodes[2].style.display = "none";
+  function toggleNav() {
+  	navMenu.classList.toggle("open");
+  	menuOverlay.classList.toggle("active");
+  	document.body.classList.toggle("hidden-scrolling");
   }
-}
 
-document.addEventListener("click", function (e) {
-  if (!nav.contains(e.target)) {
-    closeAll(parent);
+  navMenu.addEventListener("click", (event) =>{
+      if(event.target.hasAttribute("data-toggle") && 
+      	window.innerWidth <= mediaSize){
+      	// prevent default anchor click behavior
+      	event.preventDefault();
+      	const menuItemHasChildren = event.target.parentElement;
+        // if menuItemHasChildren is already expanded, collapse it
+        if(menuItemHasChildren.classList.contains("active")){
+        	collapseSubMenu();
+        }
+        else{
+          // collapse existing expanded menuItemHasChildren
+          if(navMenu.querySelector(".menu-item-has-children.active")){
+        	collapseSubMenu();
+          }
+          // expand new menuItemHasChildren
+          menuItemHasChildren.classList.add("active");
+          const subMenu = menuItemHasChildren.querySelector(".sub-menu");
+          subMenu.style.maxHeight = subMenu.scrollHeight + "px";
+        }
+      }
+  });
+  function collapseSubMenu(){
+  	navMenu.querySelector(".menu-item-has-children.active .sub-menu")
+  	.removeAttribute("style");
+  	navMenu.querySelector(".menu-item-has-children.active")
+  	.classList.remove("active");
   }
-})
-
-// Mobile Nav
-
-const mParent = document.querySelectorAll(".mobile-nav .m-drop-down");
-const mNav = document.querySelector(".mobile-nav");
-const toggleNav = document.getElementById("toggle-nav");
-
-for (let i = 0; i < mParent.length; i++) {
-  mParent[i].addEventListener("click", function () {
-    let ddStatus = mParent[i].childNodes[2].style.display;
-
-    if (ddStatus === "block") {
-      mParent[i].childNodes[2].style.display = "none";
-    } else {
-      closeAll(mParent);
-      mParent[i].childNodes[2].style.display = "block";
-    }
-  })
-}
-
-toggleNav.addEventListener("click", function () {
-  mNav.classList.toggle("open");
-  toggleNav.classList.toggle("open");
-})
-
-window.onscroll = function() {myFunction()};
-
-// Get the navbar
-let navbar = document.getElementById("desktop-nav");
-
-// Get the offset position of the navbar
-let sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
+  function resizeFix(){
+  	 // if navMenu is open ,close it
+  	 if(navMenu.classList.contains("open")){
+  	 	toggleNav();
+  	 }
+  	 // if menuItemHasChildren is expanded , collapse it
+  	 if(navMenu.querySelector(".menu-item-has-children.active")){
+        	collapseSubMenu();
+     }
   }
-}
 
+  window.addEventListener("resize", function(){
+     if(this.innerWidth > mediaSize){
+     	resizeFix();
+     }
+  });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})();
 

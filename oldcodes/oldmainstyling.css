@@ -1,0 +1,514 @@
+body {
+    padding-top: 100px;
+    font-family:"Roboto";
+    position:static;
+    }
+    
+     *{
+    box-sizing: border-box;    
+    padding:0;
+    margin:0;
+    scroll-behavior: smooth;
+    }
+    
+    
+    
+    header {
+    background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);
+    height: 100px;
+    width: 100%;
+    font-size: 18px;
+    padding: 0px 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+    }
+    
+    .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    }
+    
+    .main-heading {
+    text-align: left;
+    font-size:32px;
+    font-weight:bold;
+    padding:0px 10px;
+    top: 0;
+    color:#eee;
+    }
+    
+    /*section {
+    padding: 32px;
+    }*/
+    
+    .desktop-nav {
+    width: 100vw;
+    position: absolute;
+    height:20px;
+    top:0;
+    left: 0;
+    z-index: 1;
+    
+    }
+    .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    }
+    nav {
+    float:right;
+    }
+    
+    nav ul {
+    display: flex;
+    padding: 30px 40px;
+    font-size: 18px;
+    list-style: none;
+    
+    }
+    
+    nav ul a {
+    
+    padding: 16px 32px;
+    display: block;
+    text-decoration: none;
+    color:#fff;
+    
+    
+    }
+    
+    nav ul a:hover {
+    background:#243447;
+    }
+    
+    nav ul ul {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    box-shadow: #243447 ;
+    }
+    
+    nav ul ul a {
+    min-width:170px;
+    background:  #c51f5d;
+    
+    }
+    
+    .mobile-nav {
+    display:none;
+    }
+    
+    #toggle-nav {
+    display:none;
+    
+    }
+    
+    i {
+    margin-left: 8px;
+    
+    }
+    
+    /* Mobile Navigation */
+    
+    @media screen and (max-width: 700px) {
+    .desktop-nav {
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    
+    }
+    
+    #toggle-nav {
+    display:block;
+    position:fixed;
+    top:20px;
+    right:200px;
+    font-size:42px;
+    background:#eee;
+    padding: 2px 16px;
+    border-radius:50%;
+    transition: .4s;
+    cursor:pointer;
+    }
+    
+    #toggle-nav.open {
+    transform: rotate(225deg);
+    color: white;
+    display:  block;
+    
+    
+    background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);
+    }
+    .mobile-nav {
+    display: block;
+    max-height:0;
+    overflow:hidden;
+    transition: .4s ease-in-out;
+    }
+    
+    .mobile-nav.open {
+    max-height:260px;
+    
+    }
+    
+    .mobile-nav ul a {
+    display:block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color:#fff;
+    background:#222;
+    }
+    
+    .mobile-nav ul ul  {
+    margin-left: 4px;
+    display:none;
+    }
+    
+    .mobile-nav ul ul a {
+    background:#111;
+    }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*styling for all the pages*/
+    @font-face {
+    font-family:"Allesa";
+    src: url("/fonts/AllessaPersonalUse-4pRl.ttf") format("truetype");
+    }
+    
+    .shading {
+    background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);
+    }
+    .shadingFooter {
+    
+    background: linear-gradient(to bottom,  #c51f5d 0%, #243447  100%);
+    
+    width: 100%; 
+    top: 10px;
+    margin-top: -10px;
+    }
+    
+    .contactinfo ul
+    {
+    position: static;
+    display: absolute;
+    left: 20px;
+    display: flex;
+    flex-direction: row;
+    
+    }
+    
+    .contactinfo {
+    display: flex;
+    position: static;
+    text-decoration: none;
+    height: 200px;
+    margin: auto;
+    font-size: 20;
+    
+    }
+    .contactinfo ul li {
+    text-decoration: none;
+    padding: 10px 60px;
+    
+    
+    
+    }
+    
+    .contactinfo ul li i{
+    text-decoration: none;
+    width:  350px;
+    color: #243447;
+    
+    }
+    
+    
+    
+    .navStyle{
+    text-decoration:  #c51f5d;
+    
+    }
+    .navStyle:hover {
+    background: #243447;
+    display: block;
+    left: 40px;
+    
+    }
+    
+    @media (max-width:500px) 
+       {
+        .social-links{
+        display:flex ;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        }
+        }
+    
+    /*.social-links{
+    display:flex ;
+    justify-content: center;
+    }
+    */
+    .social-links ul {
+    display: flex;
+    
+    }
+    
+    .social{
+    list-style: none;
+    
+    }
+    .social a{
+    padding:10px 60px;
+    font-size: 30px;
+    color: #ffffff;
+    
+    
+    
+    }
+    
+    .social a i {
+    background-color: #c51f5d;
+    display: inline-block;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 20px;
+    
+    }
+    
+    
+    .social:hover {
+    transform: scale(1.5);
+    
+    
+    
+    
+    
+    }
+    /* Container needed to position the button. Adjust the width as needed */
+    .container {
+    position: relative;
+    
+    background-size: cover;
+    
+    }
+    
+    /* Make the image responsive */
+    .container img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    
+    
+    }
+    
+    /* Style the button and place it in the middle of the container/image */
+    .container .btn {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom,  #c51f5d 0%, #243447  100%);
+    color: rgb(224, 199, 199);
+    font-size: 18px;
+    padding: 12px 24px;
+    border:none;
+    cursor: pointer;
+    border-radius: 5px;
+    
+    
+    }
+    
+    
+    .container .btn.hover {
+    
+    transform: scale(1.5);
+    
+    }
+    
+    
+    .container .btn:hover {
+    background-color: #243447;
+    }
+    * {
+    box-sizing: border-box;
+    
+    }
+    
+    /* Create three equal columns that floats next to each other */
+    .column {
+    
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+    height: auto; /* Should be removed. Only for demonstration */
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    
+    a {
+    color: rgb(139, 8, 96);
+    
+    }
+    b {
+    color: #ffffff;
+    
+    }
+    
+    p3 {
+    
+    font-family: Georgia, serif;
+    }
+    
+    .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
+    p1 { 
+    font-size: 18px;
+    display: block;
+    }
+    ul{
+    list-style:none;
+    }
+    
+    
+    
+    
+    #blogs{
+    color: #ffffff;
+    }
+    #creative{
+    color:#f1f1f1;
+    
+    }
+    
+    #dropdown {
+    
+    display:none;
+    position: absolute;
+    width:130%;
+    background: linear-gradient(to bottom,#243447  0%,  #c51f5d 100%);;
+    
+    min-width: 60px;
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+    z-index: 5;
+    text-align: left;
+    left: -20%;
+    top: 70%
+    }
+    #dropdown li{
+    
+    padding: -10px 0px;
+    
+    }
+    #dropdown.active{
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0px;
+    text-align: center; 
+    
+    }
+    
+    
+    /*dropdown creative*/
+    
+    
+    
+    #mycreative {
+    display:none;
+    position: absolute;
+    width:130%;
+    
+    /*background-color:  #243447;*/
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 5;
+    text-align: left;
+    left: -20%;
+    top: 70%
+    }
+    #mycreative li{
+    
+    padding: -10px 0px;
+    
+    }
+    #mycreative.active{
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0px;
+    text-align: center; 
+    
+    }
+    
+    
+    
+    /* Dropdown Button */
+    .droptxt {
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    }
+    
+    /* The container <div> - needed to position the dropdown content */
+    .CreativeWork {
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    z-index: 5;
+    
+    }
+    
+    /* Dropdown Content (Hidden by Default) */
+    .Creative-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+    
+    /* Links inside the dropdown */
+    .Creative-content ul li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+    
+    /* Change color of dropdown links on hover */
+    .Creative-content a:hover {background-color: rgb(202, 44, 105);}
+    
+    /* Show the dropdown menu on hover */
+    .CreativeWork:hover .Creative-content {display: block;}
+    
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .CreativeWork:hover .droptxt {background-color: #243447;}

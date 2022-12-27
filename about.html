@@ -9,68 +9,73 @@
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--<link rel="stylesheet" href="navbar.css">-->
   <link rel="stylesheet" href="mainStyling.css">
+  <link rel="stylesheet" href="animation.css">
   <link rel="stylesheet" href="style.css">
   <title>Responsive Nav Menu</title>
   <script src="index.js" type="module" async ></script>
   <script src="main.js" type="module" async ></script>
+
 </head>
 
 <body >
+    
+    
+      <!-- header start -->
+     
+      <header class="header">
+         <div class="container">
+            <div class="header-main">
+               <div class="logo">
+                  <a href="#"> <img src="images/logo.png" style="height: 2cm;" color="#243447"></a>
+               </div>
+               <div class="open-nav-menu">
+                  <span></span>
+               </div>
+               <div class="menu-overlay">
+               </div>
+               <!-- navigation menu start -->
+               <nav class="nav-menu">
+                 <div class="close-nav-menu">
+                    <img src="images/close.svg" alt="close">
+                 </div>
+                 <ul class="menu">
 
-  <header>
-    <section class="main-heading"><img src="images/logo.png" style="height: 2cm;" color="#243447"> <h>Fitness, Health & Sanity</h></section>
-  </header>
+                    <li class="menu-item">
+                       <a href="index.html">Home</a>                         
+                    </li>
 
-  <section class="desktop-nav">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="drop-down"><a href="#">Theory Blogs <i class="fas fa-caret-down"></i></a>
-          <ul>
-            <li><a href="blog.html">Blogs</a></li>
-            <li><a href="CharacterDes.html">CharacterDescription and Rationale</a></li>
-            <li><a href="Wireframes.html">Wireframes</a></li>
-          </ul>
-        </li>
-        <li class="drop-down"><a href="#">Creative Work <i class="fas fa-caret-down"></i></a>
-          <ul>
-            <li><a href="Noxoloblogs.html">Noxolo's blogs</a></li>
-            <li><a href="Myimages.html">Images</a></li>
-            <li><a href="videos.html">Videos</a></li>
-          </ul>
-        </li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-</section>
-
-  <section id="toggle-nav">☰</section>
- 
-  <section class="mobile-nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li class="m-drop-down"><a href="#">Theory Blogs <i class="fas fa-caret-down"></i></a>
-        <ul>
-          <li><a href="blog.html">Blogs</a></li>
-          <li><a href="CharacterDes.html">CharacterDescription and Rationale</a></li>
-          <li><a href="Wireframes.html">Wireframes</a></li>
-        </ul>
-      </li>
-      <li class="m-drop-down"><a href="#">Creative Work <i class="fas fa-caret-down"></i></a>
-        <ul>
-          <li><a href="Noxoloblogs.html">Noxolo's blogs</a></li>
-          <li><a href="Myimages.html">Images</a></li>
-          <li><a href="videos.html">Videos</a></li>
-        </ul>
-      </li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </section>
-           
+                    <li class="menu-item">
+                       <a href="about.html">About</a>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                       <a href="#" data-toggle="sub-menu">Theory blogs<i class="fas fa-caret-down"></i></a>
+                       <ul class="sub-menu">
+                        <li class="menu-item"><a href="blog.html">Blogs</a></li>
+                        <li class="menu-item"><a href="CharacterDes.html">CharacterDescription and Rationale</a></li>
+                        <li class="menu-item"><a href="Wireframes.html">Wireframes</a></li>
+                    </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                       <a href="#" data-toggle="sub-menu">creativity<i class="fas fa-caret-down"></i></a>
+                       <ul class="sub-menu">
+                           <li class="menu-item"><a href="Noxoloblogs.html">Noxolo's blogs</a></li>
+                           <li class="menu-item"><a href="Myimages.html">Images</a></li>
+                           <li class="menu-item"><a href="videos.html">Videos</a></li>
+                           
+                       </ul>
+                    </li>
+                    <li class="menu-item">
+                       <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="menu-item">
+                       <a href="contact.html">Contact</a>
+                    </li>
+                 </ul>
+               </nav>
+               <!-- navigation menu end -->
+            </div>
+         </div>
+      </header>
      <!-- content starts here -->
 
 
@@ -192,88 +197,22 @@ Hi there lovies! I am Noxolo Faith Mphephu, 28 years of age and I'm from
                               <!-- content ends here -->
 <!--Footer starts here-->
 
-<footer class="shadingFooter">
-<section class= "contactinfo" align = "center">
-<ul class= "info">
-<li>
-  <br></br>
-<!--Contacts information-footer-->
-  <span><i class="fa fa-phone" style="font-size:35px" ></i>  </span>
-  <br/><br/>
-  <font color="#ffffff" size="5" face="arial">
-  <span> Phone No <br>
-  </font>
-  <p>
-    <font color="#c2c0c3" size="3" face="arial">
-      +27 621596651</span>
-   </font>
-  </p>  
-</li>
+<footer>
+  <div class="footer-content">
+      <h3>Fitness, Health and Sanity</h3>
+      <p>Fitness, Health and Sanity is a website composed of gathered information on healthy lifestyle (This Web project was developed during Covid19) and my theory blogs on interactive media studies, including research on technogy tools.</p>
+      <ul class="socials">
+          <li><a href="socials/Facebook.html"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="socials/Twitter.html"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/p/Cmlh01iqUf1/?igshid=YmMyMTA2M2Y="><i class="fa fa-instagram"></i></a></li>
+          <li><a href="socials/Youtube.html"><i class="fa fa-youtube"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/rolivhuwa-shallot-mandaha/"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+      
+      <p>copyright © <a href="https://rolivhuwa-shally02.github.io/WSOA3028A_1672977/" style="color:white ">Fitness, Health and Sanity</a> </p>          
 
-<li>
-  <br></br>
-  <span><i class="fa fa-envelope"   style="font-size:35px"></i> </span>
-     <br/><br/>
-  <font color="#ffffff" size="5" face="arial">
-  <span>  Email <br>
-  </font>
-  <p>
-    <font color="#c2c0c3" size="3" face="arial">
-      Noxolo@fitness.net</span>
-   </font>
-  </p>  
-</li>
-<li>
-  <br></br>
-  <span><i class="fa fa-map-marker"  style="font-size:35px"></i> </span>
-  <br/><br/>
-  <font color="#ffffff" size="5" face="arial">
-  <span> Location <br>
-  </font>
-  <p>
-    <font color="#c2c0c3" size="3" face="arial">
-      Protea Glen, Johannesburg, 1818</span>
-   </font>
-  </p>  
-</li>
-</ul>
-</section>
-<!--Contacts information end-footer-->
-
-
-<section colspan="3">
-
-<hr noshade>
-
-<section colspan="3" height="100" valign="top">
-<section border="0" width="30%" cellpadding="0" cellspacing="0" align="center">
-<br></br>
- 
-<section class = "social-links">
-
-<ul>
-
-<li class="social" > <a href="socials/Facebook.html"><span><i class="fa fa-facebook" valign = "middle"></i></span></a> </li>
-<li class="social" > <a href="socials/skype.html"><i class="fa fa-skype"></i></a> </li>
-<li class="social" > <a href="socials/Linkedin.html"><i class="fa fa-linkedin"></i></a> </li>
-<li class="social" > <a href="socials/googleplus.html"><i class="fa fa-google-plus"></i></a> </li>
-</ul>
-
-</section>
-
-
-<br></br>
-<br></br>
-
-
-</section>     
-    
+  </div>
 </footer>
-
-<!-- End Footer -->
 
 </body>
 </html>
-
-  
-  
