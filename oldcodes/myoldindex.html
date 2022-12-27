@@ -251,3 +251,224 @@ setInterval(createBubble,50)
 </body>
 </html>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--<link rel="stylesheet" href="navbar.css">-->
+  <link rel="stylesheet" href="mainStyling.css">
+  <link rel="stylesheet" href="animation.css">
+  <title>Responsive Nav Menu</title>
+  <script src="index.js" type="module" async ></script>
+</head>
+
+
+<body >
+    
+    
+      <!-- header start -->
+     
+      <header class="header">
+         <div class="container">
+            <div class="header-main">
+               <div class="logo">
+                  <a href="#"> <img src="images/logo.png" style="height: 2cm;" color="#243447"></a>
+               </div>
+               <div class="open-nav-menu">
+                  <span></span>
+               </div>
+               <div class="menu-overlay">
+               </div>
+               <!-- navigation menu start -->
+               <nav class="nav-menu">
+                 <div class="close-nav-menu">
+                    <img src="images/close.svg" alt="close">
+                 </div>
+                 <ul class="menu">
+
+                    <li class="menu-item">
+                       <a href="index.html">Home</a>                         
+                    </li>
+
+                    <li class="menu-item">
+                       <a href="about.html">About</a>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                       <a href="#" data-toggle="sub-menu">Theory blogs<i class="fas fa-caret-down"></i></a>
+                       <ul class="sub-menu">
+                        <li class="menu-item"><a href="blog.html">Blogs</a></li>
+                        <li class="menu-item"><a href="CharacterDes.html">CharacterDescription and Rationale</a></li>
+                        <li class="menu-item"><a href="Wireframes.html">Wireframes</a></li>
+                    </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                       <a href="#" data-toggle="sub-menu">creativity<i class="fas fa-caret-down"></i></a>
+                       <ul class="sub-menu">
+                           <li class="menu-item"><a href="Noxoloblogs.html">Noxolo's blogs</a></li>
+                           <li class="menu-item"><a href="Myimages.html">Images</a></li>
+                           <li class="menu-item"><a href="videos.html">Videos</a></li>
+                           
+                       </ul>
+                    </li>
+                    <li class="menu-item">
+                       <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="menu-item">
+                       <a href="contact.html">Contact</a>
+                    </li>
+                 </ul>
+               </nav>
+               <!-- navigation menu end -->
+            </div>
+         </div>
+      </header>
+      <!-- header end -->
+    
+     <!-- home section start -->
+     --<script type = "text/javascript">
+      function createBubble()
+      {
+        const section = document.querySelector('section')
+        const createElement = document.createElement('em')
+        let size = Math.random() * 60;
+      
+        createElement.style.width = size + 'px';
+        createElement.style.height = size + 'px';
+        createElement.style.left = Math.random() * innerWidth + "px";
+        section.appendChild(createElement);
+      
+        setTimeout (() =>{
+          createElement.remove()
+        },3500 )
+       
+      
+      
+      }
+      
+      setInterval(createBubble,50)
+      
+      
+      </script> 
+      
+      
+      
+      <!--content-->
+      
+        
+      <section>
+          <section class="container">
+            
+           <img src="images/cookies-843230_1920.jpg" style="margin-top: -10%" alt="food"  width="100%">
+           
+            
+            <button class="btn"><a href="foodMenu.html"> <p3 style="color:white "><span>View Healthy Food Ideas</p3 ></span> </a></button>
+              
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <style>
+              .btn {
+                border-radius: 4px;
+                
+                border: none;
+                background: linear-gradient(to bottom,  #c51f5d 0%, #243447  100%);
+                color: #FFFFFF;
+                text-align: center;
+                font-size: 30px;
+                padding: 30px;
+                width: 300px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+              }
+              
+              .btn span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.4s;
+              }
+              
+              .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.4s;
+              }
+              
+              .btn:hover span {
+                padding-right: 30px;
+              }
+              
+              .btn:hover span:after {
+                opacity: 1;
+                right: 0;
+              }
+              </style>
+      
+             <!--<body>-->
+            
+           
+        
+         
+        </section>
+        </section>
+             
+     <!-- home section end -->
+
+
+
+     <!--footer-->
+     <footer>
+      <div class="footer-content">
+          <h3>Fitness, Health and Sanity</h3>
+          <p>Fitness, Health and Sanity is a website composed of gathered information on healthy lifestyle (This Web project was developed during Covid19) and my theory blogs on interactive media studies, including research on technogy tools.</p>
+          <ul class="socials">
+              <li><a href="socials/Facebook.html"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="socials/Twitter.html"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/p/Cmlh01iqUf1/?igshid=YmMyMTA2M2Y="><i class="fa fa-instagram"></i></a></li>
+              <li><a href="socials/Youtube.html"><i class="fa fa-youtube"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/rolivhuwa-shallot-mandaha/"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+          
+          <p>copyright © <a href="https://rolivhuwa-shally02.github.io/WSOA3028A_1672977/" style="color:white ">Fitness, Health and Sanity</a> </p>          
+
+      </div>
+  </footer>
+    
+    </body>
+    </html>

@@ -16,59 +16,60 @@
 
 <body >
 
-  <header>
-    <section class="main-heading"><img src="images/logo.png" style="height: 2cm;" color="#243447"> <h>Fitness, Health & Sanity</h></section>
-  </header>
+  <header class="header">
+    <div class="container">
+       <div class="header-main">
+          <div class="logo">
+             <a href="#"> <img src="images/logo.png" style="height: 2cm;" color="#243447"></a>
+          </div>
+          <div class="open-nav-menu">
+             <span></span>
+          </div>
+          <div class="menu-overlay">
+          </div>
+          <!-- navigation menu start -->
+          <nav class="nav-menu">
+            <div class="close-nav-menu">
+               <img src="images/close.svg" alt="close">
+            </div>
+            <ul class="menu">
 
-  <section class="desktop-nav">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="drop-down"><a href="#">Theory Blogs <i class="fas fa-caret-down"></i></a>
-          <ul>
-            <li><a href="blog.html">Blogs</a></li>
-            <li><a href="CharacterDes.html">CharacterDescription and Rationale</a></li>
-            <li><a href="Wireframes.html">Wireframes</a></li>
-          </ul>
-        </li>
-        <li class="drop-down"><a href="#">Creative Work <i class="fas fa-caret-down"></i></a>
-          <ul>
-            <li><a href="Noxoloblogs.html">Noxolo's blogs</a></li>
-            <li><a href="Myimages.html">Images</a></li>
-            <li><a href="videos.html">Videos</a></li>
-          </ul>
-        </li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-</section>
+               <li class="menu-item">
+                  <a href="index.html">Home</a>                         
+               </li>
 
-  <section id="toggle-nav">☰</section>
- 
-  <section class="mobile-nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li class="m-drop-down"><a href="#">Theory Blogs <i class="fas fa-caret-down"></i></a>
-        <ul>
-          <li><a href="blog.html">Blogs</a></li>
-          <li><a href="CharacterDes.html">CharacterDescription and Rationale</a></li>
-          <li><a href="Wireframes.html">Wireframes</a></li>
-        </ul>
-      </li>
-      <li class="m-drop-down"><a href="#">Creative Work <i class="fas fa-caret-down"></i></a>
-        <ul>
-          <li><a href="Noxoloblogs.html">Noxolo's blogs</a></li>
-          <li><a href="Myimages.html">Images</a></li>
-          <li><a href="videos.html">Videos</a></li>
-        </ul>
-      </li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </section>
+               <li class="menu-item">
+                  <a href="about.html">About</a>
+               </li>
+               <li class="menu-item menu-item-has-children">
+                  <a href="#" data-toggle="sub-menu">Theory blogs<i class="fas fa-caret-down"></i></a>
+                  <ul class="sub-menu">
+                   <li class="menu-item"><a href="blog.html">Blogs</a></li>
+                   <li class="menu-item"><a href="CharacterDes.html">CharacterDescription and Rationale</a></li>
+                   <li class="menu-item"><a href="Wireframes.html">Wireframes</a></li>
+               </ul>
+               </li>
+               <li class="menu-item menu-item-has-children">
+                  <a href="#" data-toggle="sub-menu">creativity<i class="fas fa-caret-down"></i></a>
+                  <ul class="sub-menu">
+                      <li class="menu-item"><a href="Noxoloblogs.html">Noxolo's blogs</a></li>
+                      <li class="menu-item"><a href="Myimages.html">Images</a></li>
+                      <li class="menu-item"><a href="videos.html">Videos</a></li>
+                      
+                  </ul>
+               </li>
+               <li class="menu-item">
+                  <a href="gallery.html">Gallery</a>
+               </li>
+               <li class="menu-item">
+                  <a href="contact.html">Contact</a>
+               </li>
+            </ul>
+          </nav>
+          <!-- navigation menu end -->
+       </div>
+    </div>
+ </header>
     <!--<link rel="stylesheet" href="animation.css">-->
 
 
